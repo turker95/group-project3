@@ -1,2 +1,5 @@
-# group-project3
-Python parsing
+//Group-project3
+//Turker Ayar
+//Python parsing
+#import requests
+#import datetime 
