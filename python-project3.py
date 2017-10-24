@@ -6,6 +6,7 @@ from datetime import datetime
 
 i = 0
 by_month = {}
+errors = {}
 
 print "Downloading log file ..."
 
@@ -17,7 +18,18 @@ print "Log file was saved ..."
 
 regex = re.compile(".*\[(.*) \-[0-9]{4}\] \"([A-Z]+) (.+?)( HTTP.*\"|\") ([2-5]0[0-9]) .*")
 
-for line in open(http_log.txt
+for line in open(http_log.txt, 'r'):
+  parts = regex.split(line)
+  
+  if parts or len(parts) < 7:
+    print "Unexpected line form ..."
+    errors.append(line)
+    continue
+   
+  
+ 
+  
+  
 
 
 
