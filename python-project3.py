@@ -21,7 +21,7 @@ regex = re.compile(".*\[(.*) \-[0-9]{4}\] \"([A-Z]+) (.+?)( HTTP.*\"|\") ([2-5]0
 for line in open(http_log.txt, 'r'):
   parts = regex.split(line)
   
-  if parts or len(parts) < 7:
+  if not parts or len(parts) < 7:
     print "Unexpected line form ..."
     errors.append(line)
     continue
